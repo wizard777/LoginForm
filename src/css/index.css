@@ -347,35 +347,41 @@ template {
 }
 
 :root {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.30;
 }
 
-.container {
-  max-width: 300px;
-  margin: 150px auto;
+body {
+  background-color: #f8f8f8;
 }
 
-.container h2 {
+body .container {
+  max-width: 300px;
+  height: auto;
+  margin: 120px auto;
+  background-color: white;
+}
+
+body .container h2 {
   text-align: center;
-  margin: 3rem 0;
+  padding: 2rem 0;
   color: #eb8e37;
 }
 
-.container .form-input {
+body .container .form-input {
   text-align: center;
   margin-top: 1.3rem;
   min-width: 30%;
   position: relative;
 }
 
-.container .form-input.not-empty label {
+body .container .form-input.not-empty label {
   top: -1.2em;
   font-size: 0.9em;
 }
 
-.container .form-input input,
-.container .form-input textarea {
+body .container .form-input input,
+body .container .form-input textarea {
   width: 55%;
   padding: 0.2em, 0;
   border: none;
@@ -384,9 +390,9 @@ template {
   min-width: inherit;
 }
 
-.container .form-input input + label,
-.container .form-input textarea + label {
-  margin-left: 5rem;
+body .container .form-input input + label,
+body .container .form-input textarea + label {
+  margin-left: 4rem;
   position: absolute;
   left: 0;
   top: 0;
@@ -395,39 +401,39 @@ template {
   color: silver;
 }
 
-.container .form-input input:focus,
-.container .form-input textarea:focus {
+body .container .form-input input:focus,
+body .container .form-input textarea:focus {
   border-color: #006eff;
 }
 
-.container .form-input input:focus + label,
-.container .form-input textarea:focus + label {
+body .container .form-input input:focus + label,
+body .container .form-input textarea:focus + label {
   top: -1.3em;
   font-size: 0.9em;
   color: #006eff;
 }
 
-.container .form-input textarea {
+body .container .form-input textarea {
   resize: vertical;
 }
 
-.container .form-radio {
+body .container .form-radio {
   margin-top: 50px;
 }
 
-.container .form-radio input {
+body .container .form-radio input {
   visibility: hidden;
   position: absolute;
 }
 
-.container .form-radio input + label {
+body .container .form-radio input + label {
   position: relative;
   padding-left: 1.2rem;
   margin-left: 1rem;
   cursor: pointer;
 }
 
-.container .form-radio input + label::before, .container .form-radio input + label::after {
+body .container .form-radio input + label::before, body .container .form-radio input + label::after {
   content: "";
   position: absolute;
   top: 0.1rem;
@@ -440,34 +446,34 @@ template {
   transition: 0.5s all;
 }
 
-.container .form-radio input:checked + label::before {
+body .container .form-radio input:checked + label::before {
   border-color: crimson;
 }
 
-.container .form-radio input:checked + label::after {
+body .container .form-radio input:checked + label::after {
   border: none;
   background: crimson;
   -webkit-transform: scale(0.6);
           transform: scale(0.6);
 }
 
-.container .form-checkbox {
+body .container .form-checkbox {
   margin: 1rem 2rem;
 }
 
-.container .form-checkbox input {
+body .container .form-checkbox input {
   visibility: hidden;
   position: absolute;
 }
 
-.container .form-checkbox input + label {
+body .container .form-checkbox input + label {
   position: relative;
   padding-left: 1.2rem;
   margin: 1rem 1rem 1rem 0;
   cursor: pointer;
 }
 
-.container .form-checkbox input + label::before {
+body .container .form-checkbox input + label::before {
   content: "";
   position: absolute;
   top: 0.1rem;
@@ -480,7 +486,7 @@ template {
   transition: 0.5s all;
 }
 
-.container .form-checkbox input + label::after {
+body .container .form-checkbox input + label::after {
   content: "\2714";
   position: absolute;
   top: 0.1rem;
@@ -499,23 +505,27 @@ template {
   opacity: 0;
 }
 
-.container .form-checkbox input:checked + label::before {
+body .container .form-checkbox input:checked + label::before {
   border-color: #3c55e0;
 }
 
-.container .form-checkbox input:checked + label::after {
+body .container .form-checkbox input:checked + label::after {
   opacity: 1;
 }
 
-.container .button {
+body .container .button {
   text-align: center;
-  cursor: pointer;
+  margin-bottom: 3rem;
 }
 
-.container .button .btn {
-  margin-top: 2rem;
+body .container .button .btn {
+  color: white;
+  background-color: #006eff;
+  border: solid 0.0002rem #006eff;
+  width: 55%;
+  margin: 3rem 0px;
   outline: none;
-  border: none;
-  background: none;
-  font-size: 1.2rem;
+  padding: .3rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
