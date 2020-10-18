@@ -12,45 +12,37 @@
 <body>
 
     <div class="container">
-        <h2>Welcome</h2>
-        <form>
-            <div class="form-input">
-                <input id="login" name="" type="text">
-                <label for="login">Username</label>
-            </div>
-            <div class="form-input">
-                <input id="password" name="" type="text">
-                <label for="password">Password</label>
-            </div>
-            <div class="button">
-                <input type="button" class="btn" value="Login"></input>
-            </div>
+        <div class="row">
+            <h2>Welcome</h2>
+            <form>
+                <div class="form-input">
+                    <input id="login" name="" type="text">
+                    <label for="login">Username</label>
+                </div>
+                <div class="form-input">
+                    <input id="password" name="" type="text">
+                    <label for="password">Password</label>
+                </div>
+                <div class="btn_box" >
+                    <input  class="btn" type="button" value="Sign Up" disabled="disabled"></input>
+                </div>
 
-            <!--   <div class="form-input">
-                <textarea id="textarea-1"></textarea>
-                <label for="textarea-1">label for textarea</label>
-            </div>
-    -->
-            <!-- <div class="form-radio">
-                <input id="sex-women" type="radio" name="sex" value="women">
-                <label for="sex-women">women</label>
+                <div class="form-checkbox">
+                    <input id="terms_and_conditions" type="checkbox" name="terms_and_conditions" onchange="isChecked(this,'submit_button')" >
+                    <label class="conditions" for="terms_and_conditions">I agree to the Terms of Service</label>
+                </div>
 
-                <input id="sex-men" type="radio" name="sex" value="men">
-                <label for="sex-men">men</label>
-            </div>
+                <div class="form-radio">
+                    <input id="sex-women" type="radio" name="sex" value="women">
+                    <label for="sex-women">women</label>
 
-            <div class="form-checkbox">
-                <input id="dni-tygodnia-pn" type="checkbox" name="dni-robocze" value="poniedzialek">
-                <label for="dni-tygodnia-pn">pon</label>
+                    <input id="sex-men" type="radio" name="sex" value="men">
+                    <label for="sex-men">men</label>
+                </div>
 
-                <input id="dni-tygodnia-wt" type="checkbox" name="dni-robocze" value="wtorek">
-                <label for="dni-tygodnia-wt">wtorek</label>
+            </form>
+        </div>
 
-                <input id="dni-tygodnia-sr" type="checkbox" name="dni-robocze" value="sroda">
-                <label for="dni-tygodnia-sr">sroda</label>
-            </div> -->
-
-        </form>
     </div>
     <script src="./index.js"></script>
 </body>

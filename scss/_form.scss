@@ -3,22 +3,24 @@ body {
 
   .container {
     max-width: $container_max_width;
-    height:auto;
+    height: auto;
     margin: 120px auto;
-    // border: solid 1px rgb(0, 255, 34);
-    background-color:$color_container;
+    padding-bottom: 2rem;
+   
+    background-color: $color_container;
 
     h2 {
       text-align: center;
-      padding: 2rem 0;
+      // padding: 2rem 0;
+      padding-top: 3rem;
+      padding-bottom: 2rem;
       color: $color_header;
+      line-height: 0.6;
     }
 
     .form-input {
-      // border: solid 1px red;
       text-align: center;
       margin-top: 1.3rem;
-      // margin-top: 1.3rem;
       min-width: 30%;
       position: relative;
 
@@ -28,9 +30,7 @@ body {
           font-size: 0.9em;
         }
       }
-      input,
-      textarea {
-        // margin-left: 100px;
+      input {
         width: 55%;
         padding: 0.2em, 0;
         border: none;
@@ -39,7 +39,7 @@ body {
         min-width: inherit;
 
         + label {
-          margin-left: 4rem;
+          margin-left: 4.6rem;
           position: absolute;
           left: 0;
           top: 0;
@@ -57,14 +57,12 @@ body {
           }
         }
       }
-
-      textarea {
-        resize: vertical;
-      }
     }
 
     .form-radio {
-      margin-top: 50px;
+      margin-top: 2rem;
+      margin-left: 4rem;
+
       input {
         visibility: hidden;
         position: absolute;
@@ -79,10 +77,10 @@ body {
           &::after {
             content: "";
             position: absolute;
-            top: 0.1rem;
+            top: 0.2rem;
             left: 0;
-            width: 1rem;
-            height: 1rem;
+            width: 0.8rem;
+            height: 0.8rem;
             border: 1px solid black;
             border-radius: 50px;
             transition: 0.5s all;
@@ -105,7 +103,14 @@ body {
     }
 
     .form-checkbox {
-      margin: 1rem 2rem;
+     
+       text-align: center;
+
+      .conditions {
+        font-style: italic;
+        font-size: 0.8rem;
+        padding-top: 0.1rem;
+      }
 
       input {
         visibility: hidden;
@@ -134,7 +139,8 @@ body {
             position: absolute;
             top: 0.1rem;
             line-height: 1.2;
-            padding-left: 0.15rem;
+            padding-right: 0.15rem;
+            padding-top: .05rem;
             left: 0;
             width: 1rem;
             height: 1rem;
@@ -142,7 +148,7 @@ body {
             border-radius: 3px;
             background-color: rgb(26, 79, 224);
             color: white;
-            font-size: 0.8rem;
+            font-size: 0.65rem;
             transition: 0.5s all;
             opacity: 0;
           }
@@ -160,24 +166,51 @@ body {
         }
       }
     }
-    .button {
-      // text-align: center;
-      // width: 150px;
-      text-align: center;
-      margin-bottom: 3rem;
-      // margin:0 auto;
+
+    .btn_box {
+     
+     text-align: center;
+     margin: 3rem 0;
+     
 
       .btn {
-        color: white;
         background-color:$color_primary;
+        color: white;
+        border: none;
         border: solid 0.0002rem $color_primary;
         width: 55%;
-        margin: 3rem 0px;
         outline: none;
-       padding: .3rem;
-        //background: none;
+        padding: 0.3rem;
         font-size: 1rem;
         cursor: pointer;
+
+      }
+
+     // input[type=button] {
+        // background-color:$color_primary;
+        // color: white;
+        // border: none;
+        // border: solid 0.0002rem $color_primary;
+        // width: 55%;
+        // outline: none;
+        // padding: 0.3rem;
+        // font-size: 1rem;
+        // cursor: pointer;
+   //   }
+
+      input[type=button]:disabled {
+        background-color: rgb(228, 228, 228);
+        color: rgb(175, 174, 174);
+        border: none;
+        outline: none;
+      }
+
+      input[disabled].btn:hover
+     // input[disabled].btn:active,
+     // input[disabled].btn:focus 
+     {
+        background: rgb(226, 225, 225);
+        cursor:not-allowed;
       }
     }
   }
